@@ -11,8 +11,14 @@ const mvcSchema = new mongoose.Schema({
     redirecturl:{
         type:String,
         required:true
-    }
-})
+    },
+    VisitedHistory:[{
+        timestamp:{
+            type:Number
+        }
+    }],
+
+},{timestamps:true})
 
 const mvctable = new mongoose.model('TableforShortUrlGen',mvcSchema);
 
